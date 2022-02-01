@@ -26,14 +26,14 @@ print("||_/=\\\\__|")
 # A, B = map(int, input().split())
 # print(A + B)
 
-# A, B = map(int, input().split())
-# print(A-B)
+A, B = map(int, input().split())
+print(A-B)
 
-# A, B = map(int, input().split())
-# print(A*B)
+A, B = map(int, input().split())
+print(A*B)
 
-# A, B = map(int, input().split())
-# print(A/B)
+A, B = map(int, input().split())
+print(A/B)
 
 # / 하나면 다 나누기
 # // 하면 몫만
