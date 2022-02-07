@@ -66,3 +66,18 @@ for i in range(N):
     A = grade_list[i]/max_grade*100
     result.append(A)
 print(sum(result)/N)
+
+# 항상 출력해서 입력값 확인하기
+# 4344
+C = int(input())
+
+for i in range(C):
+    N, *grade = map(int, input().split())
+    
+    num = 0
+    for i in range(N):
+        if grade[i] > sum(grade)/len(grade):
+            num += 1
+        else:
+            pass
+    print(f"{num/len(grade)*100:.3f}%")
