@@ -91,3 +91,35 @@ if A > B:
     print(A)
 else:
     print(B)
+
+
+# 5622
+# 숫자 1 -> 2초
+# 따라서 해당 알파벳 숫자 + 1초 만큼걸림
+# WA -> W + A -> (9 + 1) + (2 + 1)
+phone_number = {
+    "ABC": 2,
+    "DEF": 3,
+    "GHI": 4,
+    "JKL": 5,
+    "MNO": 6,
+    "PQRS": 7,
+    "TUV": 8,
+    "WXYZ": 9
+} 
+
+# 사전 = {"가": 10, "나": 100}
+# 사전["가"]
+# values()는 값 리스트 반환
+
+word = input()
+time = 0
+# 각 알파벳에 해당하는 값 + 1을 누적한다.
+# ex) UNIC -> U + N + I + C -> (8 + 1) + (6 + 1) + (4 + 1) + (2 + 1)
+# for i in range(len(word))는 i에 숫자로 들어감
+for i in word:
+    for k in phone_number.keys():
+        if i in k:
+            time += phone_number[k] + 1
+            break
+print(time)
