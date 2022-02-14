@@ -32,3 +32,8 @@ A, B, V = map(int, input().split())
 D = (V-B) / (A-B)
 D = math.ceil(D)
 print(D)
+
+
+# 10757
+A, B = map(int, input().split())
+print(A+B)
