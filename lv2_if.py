@@ -56,5 +56,15 @@ sys.stdin.readline()
 # stdin 스탠다드 인풋
 # readline() 한 줄을 읽겠다
 
+
+# 시간을 24로 나누기
+# 분을 60으로 나누기
+# 2525
 from sys import stdin
 stdin.readline()
+
+hour, min = map(int, input().split())
+times = int(input())
+
+minute = min + times
+print((hour+minute // 60) % 24, minute % 60)
