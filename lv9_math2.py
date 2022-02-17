@@ -30,6 +30,36 @@ print(len(numbers_duplicate))
 #         if n % i == 0:
 #             return
 
+
+# 2581
+# 소수에서 1을 생각하자!!
+M = int(input())
+N = int(input())
+
+def is_prime(number):
+    if number == 1:
+        return False
+    for i in range(2, int(number**0.5)+1):
+        if number % i == 0:
+            return False
+    return True
+
+def get_prime_list(start, end):
+    prime_list = []
+    for k in range(start, end+1):
+        if is_prime(k):
+            prime_list.append(k)
+    return prime_list
+
+prime_list = get_prime_list(M, N)
+
+if not prime_list:
+    print(-1)
+else:
+    print(sum(prime_list))
+    print(min(prime_list))
+
+
 # 11653
 # 소인수분해
 N = int(input())
