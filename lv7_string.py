@@ -123,3 +123,14 @@ for i in word:
             time += phone_number[k] + 1
             break
 print(time)
+
+
+# 2941
+# replace는 다시 바인딩 필요
+cro_list = ["c=", "c-", "dz=", "d-", "lj", "nj", "s=", "z="]
+word = input()
+
+for i in cro_list:
+    if i in word:
+        word = word.replace(i, "*")
+print(len(word))
