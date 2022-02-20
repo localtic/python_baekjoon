@@ -56,10 +56,9 @@ sys.stdin.readline()
 # stdin 스탠다드 인풋
 # readline() 한 줄을 읽겠다
 
-
+# 2525
 # 시간을 24로 나누기
 # 분을 60으로 나누기
-# 2525
 from sys import stdin
 stdin.readline()
 
@@ -68,3 +67,17 @@ times = int(input())
 
 minute = min + times
 print((hour+minute // 60) % 24, minute % 60)
+
+
+# 2480
+A, B, C = map(int, input().split())
+list = [A, B, C]
+
+if A == B == C:
+    print(10000+A*1000)
+elif A == B != C or A == C != B:
+    print(1000+A*100)
+elif A != B == C:
+    print(1000+B*100)
+else:
+    print(max(list) * 100)
