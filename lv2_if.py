@@ -81,3 +81,21 @@ elif A != B == C:
     print(1000+B*100)
 else:
     print(max(list) * 100)
+
+# 이차원 배열에서 인덱싱, 시간은 더 오래걸림
+from collections import Counter
+
+A, B, C = map(int, input().split())
+dices = [A, B, C]
+
+numbers = Counter(dices)
+numbers = numbers.most_common()
+num = numbers[0][1]
+dice = numbers[0][0]
+
+if num == 1:
+    print(max(dices)*100)
+elif num == 2:
+    print(1000+dice*100)
+else:
+    print(10000+dice*1000)
