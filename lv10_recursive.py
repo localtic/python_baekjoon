@@ -27,3 +27,12 @@ print(global_add(50, 100))
 # 변수의 스코프!
 # 변수 찾는 위치 지역 -> 전역
 # 한 단계 위의 범위에서 찾는다
+
+# 10870
+n = int(input())
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+print(fibonacci(n))
