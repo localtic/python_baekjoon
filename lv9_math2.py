@@ -108,3 +108,16 @@ for prime in prime_list:
         N = N // prime
         if N % prime != 0:
             break
+
+# 4153 직각삼각형
+while True:
+    triangle = list(map(int, input().split()))
+    if triangle[0] == 0 and triangle[1] == 0 and triangle[2] == 0:
+        break
+    c = max(triangle)
+    triangle.remove(c)
+    
+    if triangle[0] ** 2 + triangle[1] ** 2 == c ** 2:
+        print("right")      
+    else:
+        print("wrong")
