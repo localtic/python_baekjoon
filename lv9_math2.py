@@ -121,3 +121,28 @@ while True:
         print("right")      
     else:
         print("wrong")
+
+
+# 4948
+def is_prime(number):
+    if number == 1:
+        return False
+    for i in range(2, int(number**0.5)+1):
+        if number % i == 0:
+            return False
+    return True
+
+def get_prime_list(start, end):
+    prime_list = []
+    for k in range(start+1, end+1):
+        if is_prime(k):
+            prime_list.append(k)
+    return prime_list
+
+# 순서를 잘 보고 필요하지 않은 값을 출력하지 않도록 하자
+while True:
+    N = int(input())
+    if N == 0:
+        break
+    prime_list = get_prime_list(N, 2*N)
+    print(len(prime_list))
